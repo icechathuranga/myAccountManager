@@ -1,5 +1,6 @@
 var/cache/**
 var/logs/prod.log
 var/logs/**
+var/**
 
 
