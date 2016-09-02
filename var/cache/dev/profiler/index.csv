@@ -1,0 +1,8 @@
+b8e26e,127.0.0.1,GET,http://127.0.0.1:8000/app_dev.php/users,1472817969,01249e,200
+01249e,127.0.0.1,GET,http://127.0.0.1:8000/app_dev.php/users,1472817969,,500
+cca919,127.0.0.1,GET,http://127.0.0.1:8000/bundles/framework/css/structure.css,1472817981,b01d44,200
+b01d44,127.0.0.1,GET,http://127.0.0.1:8000/bundles/framework/css/structure.css,1472817981,,404
+6ea3e7,127.0.0.1,GET,http://127.0.0.1:8000/bundles/framework/css/exception.css,1472817981,22b084,200
+22b084,127.0.0.1,GET,http://127.0.0.1:8000/bundles/framework/css/exception.css,1472817981,,404
+964243,127.0.0.1,GET,http://127.0.0.1:8000/bundles/framework/css/body.css,1472817982,bc541b,200
+bc541b,127.0.0.1,GET,http://127.0.0.1:8000/bundles/framework/css/body.css,1472817982,,404

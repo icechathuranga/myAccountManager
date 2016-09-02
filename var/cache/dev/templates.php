@@ -79,6 +79,7 @@
   'SwiftmailerBundle:Collector:swiftmailer.html.twig' => '/var/www/html/training/myAccountManager/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig',
   'DoctrineBundle:Collector:explain.html.twig' => '/var/www/html/training/myAccountManager/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig',
   'DoctrineBundle:Collector:db.html.twig' => '/var/www/html/training/myAccountManager/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig',
+  'APIBundle:Default:index.html.twig' => '/var/www/html/training/myAccountManager/src/APIBundle/Resources/views/Default/index.html.twig',
   'DebugBundle:Profiler:dump.html.twig' => '/var/www/html/training/myAccountManager/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views/Profiler/dump.html.twig',
   'WebProfilerBundle:Collector:time.html.twig' => '/var/www/html/training/myAccountManager/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/time.html.twig',
   'WebProfilerBundle:Collector:router.html.twig' => '/var/www/html/training/myAccountManager/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/router.html.twig',
