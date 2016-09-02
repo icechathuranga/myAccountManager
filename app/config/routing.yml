@@ -1,12 +1,7 @@
-am_user:
-    resource: "@AMUserBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
 
-users:
-    type: rest
-    resource: AM\UserBundle\Controller\UsersController
+#users:
+#    type: rest
+#    resource: AM\UserBundle\Controller\UsersController
