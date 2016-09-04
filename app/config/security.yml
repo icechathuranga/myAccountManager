@@ -17,6 +17,11 @@ security:
         oauth_token:
             pattern: ^/oauth/v2/token
             security: false
+        api_doc:
+            pattern: ^/api/doc
+            security: false
+            anonymous: false
+
         api:
             pattern: ^/
             fos_oauth: true
