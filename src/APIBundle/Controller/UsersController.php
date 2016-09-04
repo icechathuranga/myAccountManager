@@ -93,7 +93,12 @@ class UsersController extends FOSRestController {
      * @param User $user
      * @ParamConverter("user", class="APIBundle:User")
      */
-    public function patchUserAction(User $user) {
+    public function patchUserAction(User $user, Request $request) {
+        $form = $this->createForm(UserType::class, $user);
+        $data = json_decode($request->getContent(), true);
+        $form->submit($data);
+        $this->getDoctrine()->getManager()->persist($user);
+        $this->getDoctrine()->getManager()->flush();
         return array('user' => $user);
     }
 
