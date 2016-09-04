@@ -30,6 +30,8 @@ use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Doctrine\Common\Persistence\ObjectManager;
+use \Symfony\Component\HttpFoundation\Request;
+use \APIBundle\Form\UserType;
 
 /**
  * [UsersController]
@@ -113,9 +115,14 @@ class UsersController extends FOSRestController {
      * @View()     
      * 
      */
-    public function postUserAction() {
+    public function postUserAction(Request $request) {
 //        echo $this->getParameter('username');
 //        die('herer');
+        
+        $user = new User();
+        $form = $this->createForm(UserType::class, $user);
+        $data = json_decode($request->getContent(), true);
+        $form->submit($data);
         $this->getDoctrine()->getManager()->persist($user);
         $this->getDoctrine()->getManager()->flush();
         return array('user' => $user);
