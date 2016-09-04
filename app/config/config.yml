@@ -3,6 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }    
     - { resource: "@APIBundle/Resources/config/services.yml" }
+    
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -81,6 +82,19 @@ fos_rest:
             - { priorities: ['json', 'xml'], fallback_format: json, prefer_extension: false }
     view:
         view_response_listener: true
+    access_denied_listener:
+        json: true
+    exception:
+        codes:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': 404
+            'Doctrine\ORM\OptimisticLockException': HTTP_CONFLICT
+        messages:
+            'Symfony\Component\Routing\Exception\ResourceNotFoundException': true
+    routing_loader:
+        default_format: json 
+        include_format: false
+    allowed_methods_listener: true
+    unauthorized_challenge: "Basic realm=\"Restricted Area\""
 
 fos_user:
     db_driver: orm

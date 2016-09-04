@@ -1,16 +1,7 @@
-api:
-    resource: "@APIBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
-
 users:
     type: rest
     resource: APIBundle\Controller\UsersController
-
+    prefix:   /api
 
 
 NelmioApiDocBundle:

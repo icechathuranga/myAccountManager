@@ -25,6 +25,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\Annotations\View;
 use APIBundle\Entity\User;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use FOS\RestBundle\Controller\FOSRestController;
 
 /**
  * [UsersController]
@@ -33,7 +34,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
  *
  * @author  Nuwan Chathuranga <nuwan@orangehrm.us.com>
  */
-class UsersController extends Controller {
+class UsersController extends FOSRestController {
 
     /**
      *
