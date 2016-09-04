@@ -72,9 +72,34 @@ sensio_framework_extra:
     view:    { annotations: true }
     router:  { annotations: true }
 
+nelmio_api_doc: ~
+
+
 fos_rest:
     format_listener:
         rules:
             - { priorities: ['json', 'xml'], fallback_format: json, prefer_extension: false }
     view:
         view_response_listener: true
+
+fos_user:
+    db_driver: orm
+    firewall_name: api
+    user_class: APIBundle\Entity\User
+
+fos_oauth_server:
+    db_driver:           orm
+    client_class:        APIBundle\Entity\Client
+    access_token_class:  APIBundle\Entity\AccessToken
+    refresh_token_class: APIBundle\Entity\RefreshToken
+    auth_code_class:     APIBundle\Entity\AuthCode
+    service:
+        user_provider: fos_user.user_manager
+
+jms_serializer:
+    metadata:
+        auto_detection: true
+        directories:
+            FOSUserBundle:
+                namespace_prefix: "FOS\\UserBundle"
+                path: "@APIBundle/Resources/config/serializer"
